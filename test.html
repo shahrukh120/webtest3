@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+
+ <style>
+
+    .container-fluid{
+      background-image: url("https://img.freepik.com/premium-photo/education-day-arrangement-table-with-copy-space_1108314-115046.jpg?w=1480");
+      background-size: cover; /* Cover the entire viewport */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      height: 100vh; /* Full viewport height */
+      margin: 0; /* Remove default margin */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .flx{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .neon-button {
+      background: linear-gradient(45deg, #67bf9c, #33ccff); /* Neon colors with gradient */
+      border: 2px solid #00ff99; /* Border color */
+      color: #fff; /* Text color */
+      text-transform: uppercase; /* Uppercase text */
+      font-weight: bold; /* Bold text */
+      padding: 10px 20px; /* Padding */
+      border-radius: 3px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(81, 239, 176, 0.7), 0 0 20px rgba(51, 204, 255, 0.7); /* Neon glow */
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    .neon-button:hover {
+      background: linear-gradient(45deg, #33ccff, #00ff99); /* Swap colors on hover */
+      box-shadow: 0 0 15px rgba(0, 255, 153, 1), 0 0 30px rgba(51, 204, 255, 1); /* Stronger glow on hover */
+    }
+
+    .neon-button:focus {
+      outline: none; /* Remove focus outline */
+    }
+  
+ </style>
+
+</head>
+<body>
+ <div class="container-fluid">
+<div class="flx">
+
+  <div class="card justify-content-center" style="width: 18rem;">
+    <img src="pub/456e988f04f75b8f3a7363c57c4c2ab5.jpg " class="card-img-top" alt="...">
+    <div class="card-body d-flex flex-column align-items-center">
+      <h5 class="card-title">Random Number Generater</h5>
+      <p class="card-text">This portal helps you to generate any random number between the limit ! </p>
+      <h1 id="c1">--</h1>
+    
+      
+        <a href="#" class="btn btn-primary flex-grow-1 me-1 mb-3 btn neon-button" onclick="gen()">Generate</a>
+        <script>
+          function gen(){
+            var val=document.getElementById("maxNumber").value;
+            var ran =Math.floor(Math.random()* val)+1;
+             document.getElementById("c1").innerText = ran;
+          }
+        </script>
+
+        <p> Enter The Limit</p>
+        <div>
+           <input type="number" id="maxNumber" class="form-control mb-1 " placeholder="Enter number">
+        </div>
+    
+    </div>
+  </div>
+
+
+</div>
+
+</div> 
+</body>
+</html>
